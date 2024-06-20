@@ -1,25 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 10rem;
     background-color: #EFF2FA;
-   
+
 }
 
-.container{
+.container {
     display: flex;
     background-color: white;
-    height:auto;
+    height: auto;
     width: auto;
     padding: 50px;
     gap: 2rem;
@@ -27,12 +27,12 @@ body{
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 30px 0 rgba(0, 0, 0, 0.24);
 }
 
-.container .rightSide{
+.container .rightSide {
 
     margin-top: 20px;
 }
 
-.container .rightSide .Fship{
+.container .rightSide .Fship {
     display: inline;
     background-color: #1B184A;
     color: white;
@@ -43,36 +43,49 @@ body{
     margin-bottom: 15px;
 }
 
-.container .rightSide .Pname{
+.container .rightSide .Pname {
 
     margin-top: 10px;
     margin-bottom: 20px;
 }
 
-.container .rightSide .oldPrice{
+.container .rightSide .oldPrice {
     text-decoration: line-through;
     margin-bottom: 2px;
     font-size: 13px;
 }
 
-.container .rightSide .NewPrice{
-    color:#1B184A ;
+.container .rightSide .NewPrice {
+    color: #1B184A;
     font-size: 35px;
     font-weight: 700;
+    animation: newprice 0.8s ease-in-out;
+}
+
+@keyframes newprice {
+    from {
+        transform: translateX(-80px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
 
 }
 
-.container .rightSide .OfferTxt{
+.container .rightSide .OfferTxt {
     font-size: 10px;
     font-weight: 400;
     color: #93929D;
     margin-bottom: 20px;
 }
 
-.container .rightSide .btnAddCart{
+.container .rightSide .btnAddCart {
     background-color: #4787EA;
     color: white;
-    width:100% ;
+    width: 100%;
     height: 2.5rem;
     border: none;
     border-radius: 5px;
@@ -80,21 +93,28 @@ body{
     font-weight: 500;
     margin-bottom: 15px;
     cursor: pointer;
+    transition: transform 0.2s ease-in-out;
 }
 
-.container .rightSide .stock{
+.container .rightSide .btnAddCart:hover {
+
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.container .rightSide .stock {
     font-size: 10px;
     margin-bottom: 15px;
 }
 
-.container .rightSide .buttons{
+.container .rightSide .buttons {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
 }
 
-.container .rightSide .buttons .btn{
- 
+.container .rightSide .buttons .btn {
+
     height: 2.5rem;
     width: 50%;
     padding: 5px;
@@ -104,9 +124,6 @@ body{
     border: 1px solid #93929D;
     min-width: fit-content;
     flex: 1;
-  
+
 
 }
-
-
-
